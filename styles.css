@@ -195,3 +195,13 @@ blockquote cite{display:block;font-size:.7em;opacity:.65;margin-top:6px;font-sty
 .phone.on .g4{box-shadow:0 0 10px #ff3b30,0 0 26px #ff3b30,0 0 46px #ff3b30}
 @keyframes pulse2{0%,100%{opacity:.6}50%{opacity:1}}
 @media (max-width:900px){.then-now{grid-template-columns:1fr}}
+
+/* business slide */
+.statcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px 28px}
+.statcard h4{color:var(--accent2);text-transform:uppercase;letter-spacing:.1em;font-size:.72em;margin-bottom:18px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.vs .side{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:14px;background:rgba(255,255,255,.04);color:var(--muted);font-size:.85em}
+.vs .side.win{background:linear-gradient(140deg,rgba(124,92,255,.28),rgba(34,211,238,.2));color:var(--ink);border:1px solid rgba(255,255,255,.18)}
+.big-n{white-space:nowrap;font-size:clamp(28px,3.9vw,60px);line-height:1;font-weight:800;letter-spacing:-.02em}
+.vs .side.win .big-n{background:linear-gradient(100deg,#fff,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.takeaway{font-size:clamp(20px,2.2vw,30px);font-weight:700;margin-top:26px;text-align:center}

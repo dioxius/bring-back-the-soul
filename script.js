@@ -13,10 +13,24 @@
     dotsEl.appendChild(b);
   });
 
+  // count-up numbers
+  function countUp(slide) {
+    slide.querySelectorAll('[data-count]').forEach(function (el) {
+      var end = +el.getAttribute('data-count'), start = performance.now(), dur = 1500;
+      el.textContent = '0';
+      (function tick(now) {
+        var p = Math.min(1, (now - start) / dur);
+        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }
+
   // reveal on view
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
+        if (!e.target.classList.contains('in')) countUp(e.target);
         e.target.classList.add('in');
         var idx = slides.indexOf(e.target);
         if (idx > -1) { current = idx; updateDots(); }
@@ -127,9 +141,8 @@
   var RECS = [
     { t: '1. Personality as a requirement', what: 'Write a short "character brief" at the start of a project and review features against it like performance goals.', ben: 'Expressive choices become deliberate and maintainable. Engineers get a clear role.', ch: 'Can turn into inconsistency. Define a few signature elements (motion, sound, color) and apply them everywhere.' },
     { t: '2. Cues + character', what: 'Test interfaces with simple click-timing or eye-tracking checks before adopting a minimalist trend. Add depth, motion, or labels where flat designs slow people down.', ben: 'Personality earns its place by also helping users.', ch: 'Testing takes time. Small teams can start with a handful of users and a prototype.' },
-    { t: '3. AI widens, not replaces', what: 'Sketch or write your own ideas first, then use AI to extend or critique them. Collect inspiration from outside your industry.', ben: 'Keep the creativity gains of AI without everyone converging on the same output.', ch: 'Slower than taking the first good option. Run small experiments comparing AI-first and human-first drafts.' },
-    { t: '4. Measure design quality', what: 'Track design indicators next to efficiency: leadership reviews of the product experience, designers in planning, user ratings of how it feels.', ben: 'Long-term value stays visible under quarterly pressure. Shareholders get something concrete to ask about.', ch: 'McKinsey shows correlation, not causation. Treat it as a hypothesis and compare products with and without extra design investment.' },
-    { t: '5. Stay collaborative', what: 'Share small experiments and results across levels of the organization so decisions rest on data from your own products.', ben: 'Engineers, managers, and investors align instead of blocking each other.', ch: 'Different companies will find different answers, and some may reasonably choose plain.' }
+    { t: '3. Measure design quality', what: 'Track design indicators next to efficiency: leadership reviews of the product experience, designers in planning, user ratings of how it feels.', ben: 'Long-term value stays visible under quarterly pressure. Shareholders get something concrete to ask about.', ch: 'McKinsey shows correlation, not causation. Treat it as a hypothesis and compare products with and without extra design investment.' },
+    { t: '4. Stay collaborative', what: 'Share small experiments and results across levels of the organization so decisions rest on data from your own products.', ben: 'Engineers, managers, and investors align instead of blocking each other.', ch: 'Different companies will find different answers, and some may reasonably choose plain.' }
   ];
   var tabs = document.getElementById('tabs'), recbox = document.getElementById('recbox');
   function showRec(i) {
@@ -139,7 +152,7 @@
   }
   RECS.forEach(function (r, i) {
     var b = document.createElement('button');
-    b.textContent = ['1. Requirement', '2. Cues + character', '3. Smart AI use', '4. Measure design', '5. Collaborate'][i];
+    b.textContent = ['1. Requirement', '2. Cues + character', '3. Measure design', '4. Collaborate'][i];
     b.onclick = function () { showRec(i); };
     tabs.appendChild(b);
   });
