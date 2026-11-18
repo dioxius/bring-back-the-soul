@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bring Back the Soul</title>
+<meta name="description" content="An informational presentation on why technology lost its personality and what engineers, organizations, and shareholders can do about it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<nav class="dots" id="dots" aria-label="Slides"></nav>
+<div class="hint" id="hint">Scroll, or press <kbd>&darr;</kbd> / <kbd>Space</kbd> to advance</div>
+
+<main id="deck">
+
+<!-- 1. TITLE -->
+<section class="slide s-hero" data-title="Title">
+  <div class="hero-glow"></div>
+  <div class="wrap center reveal">
+    <p class="eyebrow">A research-based recommendation</p>
+    <h1>Bring Back<br><span class="grad">the Soul</span></h1>
+    <p class="lead">Why technology lost its personality, and how engineers, organizations, and shareholders can get it back.</p>
+    <p class="byline">Computer Engineering &middot; Research presentation</p>
+  </div>
+</section>
+
+<!-- 2. THE FEELING (retro) -->
+<section class="slide s-retro" data-title="The feeling">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="eyebrow px">LEVEL 1: THE PROBLEM</p>
+      <h2 class="px-h">Remember when tech had <em>character?</em></h2>
+      <p>In 1998, Apple's iMac G3 came in translucent candy colors, and you could see inside the machine. Phones had swappable faceplates and weird shapes. Even cheap gadgets felt like they were made by someone with opinions.</p>
+      <p>Today most of our devices are black or silver rectangles of glass running apps that all share the same rounded buttons and gray text.</p>
+      <p class="callout">Technology is more powerful than ever. So why does it feel like it has less life?</p>
+    </div>
+    <div class="reveal d2">
+      <div class="compare" id="compare">
+        <div class="layer old">
+          <div class="art"><svg viewBox="0 0 200 180" aria-hidden="true">
+            <defs><linearGradient id="gimac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe0d8"/><stop offset="1" stop-color="#1b9fb5"/></linearGradient></defs>
+            <path d="M40 20 Q100 0 160 20 Q185 40 180 100 Q175 150 150 160 L50 160 Q25 150 20 100 Q15 40 40 20Z" fill="url(#gimac)" opacity=".92"/>
+            <rect x="52" y="34" width="96" height="74" rx="10" fill="#0d3b44"/>
+            <rect x="58" y="40" width="84" height="62" rx="6" fill="#9ff2ff"/>
+            <text x="100" y="78" text-anchor="middle" font-size="16" fill="#0d3b44" font-family="monospace">Hello!</text>
+            <rect x="70" y="164" width="60" height="8" rx="4" fill="#1b9fb5"/>
+          </svg></div>
+          <h4>1998</h4>
+          <ul><li>See-through colors</li><li>Playful shapes</li><li>Startup sound &amp; a smile icon</li></ul>
+        </div>
+        <div class="layer new" id="newLayer">
+          <div class="art"><svg viewBox="0 0 200 180" aria-hidden="true">
+            <rect x="62" y="10" width="76" height="160" rx="14" fill="#16171a" stroke="#3a3c42" stroke-width="2"/>
+            <rect x="68" y="20" width="64" height="140" rx="8" fill="#0b0c0e"/>
+            <rect x="76" y="32" width="48" height="8" rx="4" fill="#2b2d33"/>
+            <rect x="76" y="48" width="48" height="26" rx="6" fill="#23252b"/>
+            <rect x="76" y="80" width="48" height="26" rx="6" fill="#23252b"/>
+            <rect x="76" y="112" width="48" height="26" rx="6" fill="#23252b"/>
+          </svg></div>
+          <h4>Today</h4>
+          <ul><li>Black glass slab</li><li>Same rounded cards</li><li>Look-alike apps</li></ul>
+        </div>
+        <div class="handle" id="handle"><span>&#8596;</span></div>
+        <input type="range" min="0" max="100" value="50" id="slider" aria-label="Drag between 1998 and today">
+      </div>
+      <p class="tiny center">Drag the slider to travel through time</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. DEFINITIONS + STAKEHOLDERS -->
+<section class="slide s-light" data-title="Key terms">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Setting the stage</p>
+      <h2>Four ideas and four stakeholders</h2>
+    </div>
+    <div class="grid4 reveal d1">
+      <div class="card"><h4>Personality</h4><p>Distinctive, expressive choices that make a product feel made by someone, for someone, not by a template.</p></div>
+      <div class="card"><h4>Homogenization</h4><p>The process through which products, interfaces, and even ideas become more similar over time.</p></div>
+      <div class="card"><h4>Enshittification</h4><p>Cory Doctorow's term for platforms getting worse once profit pressure takes over.</p></div>
+      <div class="card"><h4>User experience</h4><p>More than "does it work": it includes beauty, surprise, and emotion (Hassenzahl &amp; Tractinsky).</p></div>
+    </div>
+    <div class="chips reveal d2" id="stake">
+      <button class="chip on" data-k="eng">Engineers &amp; designers</button>
+      <button class="chip" data-k="org">Organizations</button>
+      <button class="chip" data-k="sh">Shareholders</button>
+      <button class="chip" data-k="usr">Users</button>
+    </div>
+    <div class="stakebox reveal d2" id="stakebox"></div>
+  </div>
+</section>
+
+<!-- 4. WHY IT HAPPENED -->
+<section class="slide s-dark" data-title="Causes">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">What the research says</p>
+      <h2>Three forces flattening technology</h2>
+    </div>
+    <div class="grid3 reveal d1">
+      <div class="card glass"><span class="num">01</span><h4>Cultural copying</h4><p>Kyle Chayka's "AirSpace" essay: shared platforms and shared tools export one default look, from cafés to apps. Copying the market leader becomes the safe choice.</p></div>
+      <div class="card glass"><span class="num">02</span><h4>Profit pressure</h4><p>Doctorow: platforms start generous, then squeeze. Personality is expensive, creates exceptions to maintain, and doesn't fit neatly on a dashboard, so it gets cut first.</p></div>
+      <div class="card glass"><span class="num">03</span><h4>Trendy minimalism</h4><p>Stripping out visual cues can backfire. Nielsen Norman Group found flat interfaces caused "click uncertainty" in eye-tracking tests.</p></div>
+    </div>
+    <p class="note reveal d2">Counterpoint worth respecting: engineers value consistency, and plain products can be the right answer for some users.</p>
+  </div>
+</section>
+
+<!-- 5. CLICK UNCERTAINTY DEMO -->
+<section class="slide s-light" data-title="Click test">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Live demo</p>
+      <h2>Minimalism isn't neutral</h2>
+      <p class="sub">Two versions of the same page. Before the reveal, ask the room: <strong>what on each page can you click?</strong></p>
+    </div>
+    <div class="grid2 reveal d1" id="cueDemo">
+      <div class="demo">
+        <h4>Design A &middot; weak cues</h4>
+        <div class="mock flat">
+          <div class="mrow"><span class="t c">Home</span><span class="t c">Pricing</span><span class="t c">About</span><span class="t c">Sign up</span><span class="t c">Help</span></div>
+          <p class="t">Welcome back</p><p class="t c">Get started today</p>
+        </div>
+        <div class="res" id="resA">Look closely. Can you tell?</div>
+      </div>
+      <div class="demo">
+        <h4>Design B &middot; clear cues</h4>
+        <div class="mock cues">
+          <div class="mrow"><span class="lnk c">Home</span><span class="lnk c">Pricing</span><span class="lnk c">About</span><button class="btn c">Sign up</button><span class="lnk c">Help</span></div>
+          <p>Welcome back</p><p class="lnk c">Get started today</p>
+        </div>
+        <div class="res" id="resB">Look closely. Can you tell?</div>
+      </div>
+    </div>
+    <div class="center reveal d2"><button class="cta" id="revealCues">Reveal what's clickable</button> <span class="tiny">An illustration of "click uncertainty," not study data.</span></div>
+  </div>
+</section>
+
+<!-- 6. MONEY -->
+<section class="slide s-dark" data-title="The business case">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">For shareholders</p>
+      <h2>Design leaders pulled ahead</h2>
+      <p class="sub">McKinsey studied 300 public companies across medical technology, consumer goods, and retail banking.</p>
+    </div>
+    <div class="grid2 reveal d1">
+      <div class="bars" data-bars>
+        <h4>Annual revenue growth</h4>
+        <div class="bar"><span>Top design quartile</span><div class="track"><i style="--w:100%" class="hi"></i></div><b>10%</b></div>
+        <div class="bar"><span>Industry peers</span><div class="track"><i style="--w:60%"></i></div><b>3&ndash;6%</b></div>
+      </div>
+      <div class="bars" data-bars>
+        <h4>Annual shareholder returns</h4>
+        <div class="bar"><span>Top design quartile</span><div class="track"><i style="--w:100%" class="hi"></i></div><b>21%</b></div>
+        <div class="bar"><span>Industry peers</span><div class="track"><i style="--w:76%"></i></div><b>12&ndash;16%</b></div>
+      </div>
+    </div>
+    <p class="note reveal d2"><strong>Honest caveat:</strong> this is correlation, not proof. Well-run companies may simply invest in design too. It shows "design is a cost center" doesn't hold up, not that personality guarantees returns.</p>
+  </div>
+</section>
+
+<!-- 7. AI -->
+<section class="slide s-light" data-title="AI and sameness">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="eyebrow">The new pressure</p>
+      <h2>AI makes each of us better and all of us alike</h2>
+      <p>Doshi and Hauser asked writers to write short stories with or without AI-generated ideas. AI-assisted stories were rated more creative, especially for less creative writers.</p>
+      <p>But the group paid a price: stories written with AI ideas were more similar to each other (about 10.7% more similar with one AI idea).</p>
+      <div class="chips"><button class="chip on" id="aiOff">Humans alone</button><button class="chip" id="aiOn">With AI ideas</button></div>
+      <p class="tiny">Illustration of the finding. One experiment on short fiction; results may not transfer to every field.</p>
+    </div>
+    <div class="reveal d2"><div class="field" id="field"></div></div>
+  </div>
+</section>
+
+<!-- 8. PRODUCT SHOWCASE -->
+<section class="slide s-retro2" data-title="Showcase">
+  <div class="wrap two">
+    <div class="reveal">
+      <div class="phone" id="phone" tabindex="0" role="button" aria-label="Toggle glyph lights">
+        <div class="back">
+          <div class="coil"></div><div class="chip-a"></div><div class="chip-b"></div>
+          <div class="cam c1"></div><div class="cam c2"></div>
+          <div class="glyph g1"></div><div class="glyph g2"></div><div class="glyph g3"></div><div class="glyph g4"></div>
+        </div>
+      </div>
+      <p class="tiny center">Click the phone to switch the glyph lights</p>
+    </div>
+    <div class="reveal d2">
+      <p class="eyebrow px2">PRODUCT SHOWCASE</p>
+      <h2>A company that bet on personality</h2>
+      <p>Nothing launched its first phone in 2022 with a transparent back and light-up "glyphs." Reviewers noted that from the front it was fairly understated, but the signature gave it character. TechRadar reports founder Carl Pei wanted to bring some joy back into the mobile market.</p>
+      <blockquote>"Transparency significantly increases the design workload." <cite>Adam Bates, design director, via Disegno</cite></blockquote>
+      <p>That one line is the tension in the whole debate: personality takes work, and they chose to do the work anyway. One phone is not a trend, and reviews are not sales data, but it shows what a deliberate bet looks like.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. RECOMMENDATIONS -->
+<section class="slide s-dark" data-title="Recommendations">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">What should be done</p>
+      <h2>Five recommendations</h2>
+    </div>
+    <div class="tabs reveal d1" id="tabs"></div>
+    <div class="recbox reveal d2" id="recbox"></div>
+  </div>
+</section>
+
+<!-- 10. IMPLICATIONS + CONCLUSION -->
+<section class="slide s-hero2" data-title="Conclusion">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Implications</p>
+      <h2>What this means for each group</h2>
+    </div>
+    <div class="grid3 reveal d1">
+      <div class="card glass"><h4>Professionals</h4><p>Personality is part of the craft, and engineers have more influence over it than they think.</p></div>
+      <div class="card glass"><h4>Organizations</h4><p>How you adopt AI and structure design decisions determines whether products stand out or blend in.</p></div>
+      <div class="card glass"><h4>Shareholders</h4><p>Asking only about efficiency can hide long-term costs. Asking about design quality is a fair investor question.</p></div>
+    </div>
+    <p class="closing reveal d2">Technology doesn't have to choose between working well and feeling alive.<br><span class="grad">The next generation of devices can be remembered not just for how fast they were, but for who seemed to have made them.</span></p>
+    <p class="tiny center reveal d2">Next research: test whether design investment causes returns, and whether AI makes software interfaces more alike.</p>
+  </div>
+</section>
+
+<!-- 11. SOURCES -->
+<section class="slide s-light" data-title="Sources">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Works cited</p>
+      <h2>Sources</h2>
+    </div>
+    <ul class="srcs reveal d1">
+      <li><span class="tag sch">Scholarly</span> Doshi, Anil R., and Oliver P. Hauser. "Generative AI Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content." <i>Science Advances</i>, vol. 10, no. 28, 2024.</li>
+      <li><span class="tag sch">Scholarly</span> Hassenzahl, Marc, and Noam Tractinsky. "User Experience &ndash; A Research Agenda." <i>Behaviour &amp; Information Technology</i>, vol. 25, no. 2, 2006, pp. 91&ndash;97.</li>
+      <li><span class="tag sch">Scholarly</span> Norman, Donald A. <i>Emotional Design: Why We Love (or Hate) Everyday Things</i>. Basic Books, 2004.</li>
+      <li><span class="tag pro">Professional</span> Sheppard, Benedict, et al. "The Business Value of Design." <i>McKinsey Quarterly</i>, McKinsey &amp; Company, 25 Oct. 2018.</li>
+      <li><span class="tag pro">Professional</span> Moran, Kate. "Flat UI Elements Attract Less Attention and Cause Uncertainty." <i>Nielsen Norman Group</i>, 2017.</li>
+      <li><span class="tag pop">Popular</span> Chayka, Kyle. "Welcome to AirSpace." <i>The Verge</i>, 3 Aug. 2016.</li>
+      <li><span class="tag pop">Popular</span> Doctorow, Cory. "The 'Enshittification' of TikTok." <i>Wired</i>, 23 Jan. 2023.</li>
+      <li><span class="tag pop">Popular</span> "Nothing Phone 1 Review." <i>TechRadar</i>.</li>
+      <li><span class="tag pop">Popular</span> "To Be Clear." <i>Disegno</i>.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
