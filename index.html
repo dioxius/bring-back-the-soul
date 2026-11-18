@@ -14,7 +14,6 @@
 
 <div class="progress" id="progress"></div>
 <nav class="dots" id="dots" aria-label="Slides"></nav>
-<div class="hint" id="hint">Scroll, or press <kbd>&darr;</kbd> / <kbd>Space</kbd> to advance</div>
 
 <main id="deck">
 
@@ -22,7 +21,7 @@
 <section class="slide s-hero" data-title="Title">
   <div class="hero-glow"></div>
   <div class="wrap center reveal">
-    <p class="eyebrow">A research-based recommendation</p>
+    <p class="eyebrow">A research based recommendation</p>
     <h1>Bring Back<br><span class="grad">the Soul</span></h1>
     <p class="lead">Why technology lost its personality, and how engineers, organizations, and shareholders can get it back.</p>
     <p class="byline">Ben Kearl &middot; ENGL &middot; Recommendation Assignment</p>
@@ -40,35 +39,28 @@
       <p class="callout">Technology is more powerful than ever. So why does it feel like it has less life?</p>
     </div>
     <div class="reveal d2">
-      <div class="compare" id="compare">
-        <div class="layer old">
-          <div class="art"><svg viewBox="0 0 200 180" aria-hidden="true">
-            <defs><linearGradient id="gimac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe0d8"/><stop offset="1" stop-color="#1b9fb5"/></linearGradient></defs>
-            <path d="M40 20 Q100 0 160 20 Q185 40 180 100 Q175 150 150 160 L50 160 Q25 150 20 100 Q15 40 40 20Z" fill="url(#gimac)" opacity=".92"/>
-            <rect x="52" y="34" width="96" height="74" rx="10" fill="#0d3b44"/>
-            <rect x="58" y="40" width="84" height="62" rx="6" fill="#9ff2ff"/>
-            <text x="100" y="78" text-anchor="middle" font-size="16" fill="#0d3b44" font-family="monospace">Hello!</text>
-            <rect x="70" y="164" width="60" height="8" rx="4" fill="#1b9fb5"/>
-          </svg></div>
-          <h4>1998</h4>
-          <ul><li>See-through colors</li><li>Playful shapes</li><li>Startup sound &amp; a smile icon</li></ul>
-        </div>
-        <div class="layer new" id="newLayer">
-          <div class="art"><svg viewBox="0 0 200 180" aria-hidden="true">
-            <rect x="62" y="10" width="76" height="160" rx="14" fill="#16171a" stroke="#3a3c42" stroke-width="2"/>
-            <rect x="68" y="20" width="64" height="140" rx="8" fill="#0b0c0e"/>
-            <rect x="76" y="32" width="48" height="8" rx="4" fill="#2b2d33"/>
-            <rect x="76" y="48" width="48" height="26" rx="6" fill="#23252b"/>
-            <rect x="76" y="80" width="48" height="26" rx="6" fill="#23252b"/>
-            <rect x="76" y="112" width="48" height="26" rx="6" fill="#23252b"/>
-          </svg></div>
-          <h4>Today</h4>
-          <ul><li>Black glass slab</li><li>Same rounded cards</li><li>Look-alike apps</li></ul>
-        </div>
-        <div class="handle" id="handle"><span>&#8596;</span></div>
-        <input type="range" min="0" max="100" value="50" id="slider" aria-label="Drag between 1998 and today">
+      <div class="then-now">
+        <figure class="dev old">
+          <span class="badge px">1998</span>
+          <img src="images/imac-g3-3q.png" alt="Apple iMac G3 in Bondi Blue, a translucent teal and white desktop computer">
+          <figcaption>iMac G3: translucent, playful, unmistakable</figcaption>
+        </figure>
+        <figure class="dev new">
+          <span class="badge">Today</span>
+          <div class="stack">
+            <img class="lap" src="images/macbook-air.png" alt="A modern thin laptop seen from above">
+            <svg class="phone-mini" viewBox="0 0 80 160" aria-hidden="true">
+              <rect x="4" y="4" width="72" height="152" rx="14" fill="#16171a" stroke="#3a3c42" stroke-width="2"/>
+              <rect x="10" y="12" width="60" height="136" rx="8" fill="#0b0c0e"/>
+              <rect x="18" y="26" width="44" height="22" rx="6" fill="#23252b"/>
+              <rect x="18" y="54" width="44" height="22" rx="6" fill="#23252b"/>
+              <rect x="18" y="82" width="44" height="22" rx="6" fill="#23252b"/>
+            </svg>
+          </div>
+          <figcaption>Slim, polished, and increasingly alike</figcaption>
+        </figure>
       </div>
-      <p class="tiny center">Drag the slider to travel through time</p>
+      <p class="credit">Photos via Wikimedia Commons: iMac G3 by True Tech Talk Time (CC BY-SA 4.0); laptop by 嘉傑 (public domain).</p>
     </div>
   </div>
 </section>
@@ -118,7 +110,7 @@
     <div class="reveal">
       <p class="eyebrow">Live demo</p>
       <h2>Minimalism isn't neutral</h2>
-      <p class="sub">Two versions of the same page. Before the reveal, ask the room: <strong>what on each page can you click?</strong></p>
+      
     </div>
     <div class="grid2 reveal d1" id="cueDemo">
       <div class="demo">
@@ -127,7 +119,7 @@
           <div class="mrow"><span class="t c">Home</span><span class="t c">Pricing</span><span class="t c">About</span><span class="t c">Sign up</span><span class="t c">Help</span></div>
           <p class="t">Welcome back</p><p class="t c">Get started today</p>
         </div>
-        <div class="res" id="resA">Look closely. Can you tell?</div>
+        <div class="res" id="resA">&nbsp;</div>
       </div>
       <div class="demo">
         <h4>Design B &middot; clear cues</h4>
@@ -135,10 +127,10 @@
           <div class="mrow"><span class="lnk c">Home</span><span class="lnk c">Pricing</span><span class="lnk c">About</span><button class="btn c">Sign up</button><span class="lnk c">Help</span></div>
           <p>Welcome back</p><p class="lnk c">Get started today</p>
         </div>
-        <div class="res" id="resB">Look closely. Can you tell?</div>
+        <div class="res" id="resB">&nbsp;</div>
       </div>
     </div>
-    <div class="center reveal d2"><button class="cta" id="revealCues">Reveal what's clickable</button> <span class="tiny">An illustration of "click uncertainty," not study data.</span></div>
+    <div class="center reveal d2"><button class="cta" id="revealCues">Reveal what's clickable</button></div>
   </div>
 </section>
 
@@ -229,28 +221,31 @@
       <div class="card glass"><h4>Shareholders</h4><p>Asking only about efficiency can hide long-term costs. Asking about design quality is a fair investor question.</p></div>
     </div>
     <p class="closing reveal d2">Technology doesn't have to choose between working well and feeling alive.<br><span class="grad">The next generation of devices can be remembered not just for how fast they were, but for who seemed to have made them.</span></p>
-    <p class="tiny center reveal d2">Next research: test whether design investment causes returns, and whether AI makes software interfaces more alike.</p>
   </div>
 </section>
 
-<!-- 11. SOURCES -->
-<section class="slide s-light" data-title="Sources">
-  <div class="wrap">
+<!-- 11. QUESTIONS + SOURCES -->
+<section class="slide s-dark s-q" data-title="Questions">
+  <div class="wrap two">
     <div class="reveal">
-      <p class="eyebrow">Works cited</p>
-      <h2>Sources</h2>
+      <p class="eyebrow">Thank you</p>
+      <h2 class="big">Any questions?</h2>
+      <p class="sub">Ben Kearl &middot; ENGL &middot; Recommendation Assignment</p>
     </div>
-    <ul class="srcs reveal d1">
-      <li><span class="tag sch">Scholarly</span> Doshi, Anil R., and Oliver P. Hauser. "Generative AI Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content." <i>Science Advances</i>, vol. 10, no. 28, 2024.</li>
-      <li><span class="tag sch">Scholarly</span> Hassenzahl, Marc, and Noam Tractinsky. "User Experience &ndash; A Research Agenda." <i>Behaviour &amp; Information Technology</i>, vol. 25, no. 2, 2006, pp. 91&ndash;97.</li>
-      <li><span class="tag sch">Scholarly</span> Norman, Donald A. <i>Emotional Design: Why We Love (or Hate) Everyday Things</i>. Basic Books, 2004.</li>
-      <li><span class="tag pro">Professional</span> Sheppard, Benedict, et al. "The Business Value of Design." <i>McKinsey Quarterly</i>, McKinsey &amp; Company, 25 Oct. 2018.</li>
-      <li><span class="tag pro">Professional</span> Moran, Kate. "Flat UI Elements Attract Less Attention and Cause Uncertainty." <i>Nielsen Norman Group</i>, 2017.</li>
-      <li><span class="tag pop">Popular</span> Chayka, Kyle. "Welcome to AirSpace." <i>The Verge</i>, 3 Aug. 2016.</li>
-      <li><span class="tag pop">Popular</span> Doctorow, Cory. "The 'Enshittification' of TikTok." <i>Wired</i>, 23 Jan. 2023.</li>
-      <li><span class="tag pop">Popular</span> "Nothing Phone 1 Review." <i>TechRadar</i>.</li>
-      <li><span class="tag pop">Popular</span> "To Be Clear." <i>Disegno</i>.</li>
-    </ul>
+    <div class="reveal d2">
+      <p class="eyebrow">Sources</p>
+      <ul class="srcs small">
+        <li>Chayka, Kyle. "Welcome to AirSpace." <i>The Verge</i>, 3 Aug. 2016.</li>
+        <li>Doctorow, Cory. "The 'Enshittification' of TikTok." <i>Wired</i>, 23 Jan. 2023.</li>
+        <li>Doshi, Anil R., and Oliver P. Hauser. "Generative AI Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content." <i>Science Advances</i>, vol. 10, no. 28, 2024.</li>
+        <li>Hassenzahl, Marc, and Noam Tractinsky. "User Experience &ndash; A Research Agenda." <i>Behaviour &amp; Information Technology</i>, vol. 25, no. 2, 2006, pp. 91&ndash;97.</li>
+        <li>Moran, Kate. "Flat UI Elements Attract Less Attention and Cause Uncertainty." <i>Nielsen Norman Group</i>, 2017.</li>
+        <li>"Nothing Phone 1 Review." <i>TechRadar</i>.</li>
+        <li>Norman, Donald A. <i>Emotional Design</i>. Basic Books, 2004.</li>
+        <li>Sheppard, Benedict, et al. "The Business Value of Design." <i>McKinsey Quarterly</i>, 25 Oct. 2018.</li>
+        <li>"To Be Clear." <i>Disegno</i>.</li>
+      </ul>
+    </div>
   </div>
 </section>
 

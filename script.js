@@ -2,7 +2,6 @@
   var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
   var dotsEl = document.getElementById('dots');
   var progress = document.getElementById('progress');
-  var hint = document.getElementById('hint');
   var current = 0;
 
   // nav dots
@@ -34,7 +33,6 @@
   window.addEventListener('scroll', function () {
     var h = document.documentElement.scrollHeight - innerHeight;
     progress.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
-    if (scrollY > 80) hint.classList.add('gone');
   }, { passive: true });
 
   // keyboard presenting
@@ -54,18 +52,6 @@
       else document.exitFullscreen();
     }
   });
-
-  // then vs now slider
-  var slider = document.getElementById('slider');
-  var newLayer = document.getElementById('newLayer');
-  var handle = document.getElementById('handle');
-  function setSlide() {
-    var v = slider.value;
-    newLayer.style.clipPath = 'inset(0 0 0 ' + v + '%)';
-    handle.style.left = v + '%';
-  }
-  slider.addEventListener('input', setSlide);
-  setSlide();
 
   // stakeholders
   var STAKE = {
@@ -101,7 +87,7 @@
       resB.textContent = 'Same six items, and the design told you up front.';
       resA.classList.add('done'); resB.classList.add('done');
     } else {
-      resA.textContent = resB.textContent = 'Look closely. Can you tell?';
+      resA.innerHTML = resB.innerHTML = '&nbsp;';
       resA.classList.remove('done'); resB.classList.remove('done');
     }
   };
